@@ -220,10 +220,17 @@ header .banner{
     width: 1080px;
     max-width: 1080px;
     display: flex;
+    align-items: start;
     gap: 16px;
 }
 .bottom-inner .left-content{
     width: 42%;
+    /* height: 100%; */
+    position: sticky;
+    position: -webkit-sticky;
+    top: 16px;
+}
+.bottom-inner .left-content .sticky-box{
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -330,6 +337,10 @@ header .banner{
     object-fit: cover;
 }
 
+/* =====================================
+         Post Reusable Component
+   =====================================*/
+
 /* Post Header Style */
 .post-header{
     display: flex;
@@ -358,6 +369,10 @@ header .banner{
     font-size: 16px;
     font-weight: 600;
 }
+.post-header .brand-info .name{
+    display: flex;
+    gap: 8px;
+}
 .post-header .brand-info h3:hover{
     text-decoration: underline;
 }
@@ -365,6 +380,11 @@ header .banner{
     color: #716f6f;
     font-size: 13px;
     font-weight: 400;
+}
+.post-header .brand-info span{
+    font-size: 14px;
+    opacity: 0.6;
+    font-weight: 500;
 }
 .post-header .brand-info p:hover{
     text-decoration: underline;
@@ -380,14 +400,14 @@ header .banner{
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
     margin: 14px 0;
 }
-.right-content .featured-item .link{
+.link{
     display: inline-block;
     font-size: 23px;
     color: #0866FF;
     letter-spacing: 0.5px;
     margin-top: 3px;
 }
-.right-content .featured-item .link:hover{
+.link:hover{
     text-decoration: underline;
 }
 
@@ -463,6 +483,7 @@ header .banner{
     max-width: 100%;
     max-height: 600px;
     object-fit: cover;
+    margin-bottom: -8px;
 }
 .post-thumbnail .whatsapp-link{
     display: flex;
@@ -470,7 +491,6 @@ header .banner{
     align-items: center;
     background-color: #F0F2F5;;
     padding: 16px;
-    margin-top: -8px;
 }
 .post-thumbnail .link-left h4{
     color: #393939;
@@ -507,7 +527,7 @@ header .banner{
 
 /* Post Bottom Style */
 .post-bottom{
-    padding: 0 16px 6px 16px;
+    padding: 0 16px 10px 16px;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     margin: 0 -16px -16px -16px;
 }
@@ -535,4 +555,167 @@ header .banner{
     color: #65676B;
     font-size: 16px;
     margin-left: 10px;
+}
+.post-bottom .like-comment-cta{
+    padding: 3px;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.post-bottom .like-comment-cta a{
+    width: 145px;
+    display: inline-block;
+    padding: 6px 13px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    color: #050505;
+    font-weight: 600;
+    font-size: 15px;
+    color: #65676B;
+    text-align: center;
+}
+.post-bottom .like-comment-cta a img{
+    margin-bottom: -4px;
+    opacity: 0.6;
+    margin-right: 8px;
+}
+.post-bottom .like-comment-cta a:hover{
+    background-color: #F0F2F5;
+}
+.post-bottom .like-comment-cta .viewer-profile{
+    margin-top: 6px;
+}
+.post-bottom .like-comment-cta .viewer-profile img{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.post-bottom .like-comment-cta .viewer-profile img:last-child{
+    width: 18px;
+    height: 18px;
+    opacity: 0.6;
+    margin-bottom: 3px;
+}
+
+
+/* Comment Area */
+.view-comments h3{
+    font-size: 16px;
+    opacity: 0.6;
+    font-weight: 600;
+    margin: 8px 0;
+}
+.view-comments .comment-box{
+    display: flex;
+}
+.view-comments .comment-box .commenter-logo img{
+    width: 30px;
+    height: 30px;
+    border-radius:50% ;
+    -webkit-border-radius:50% ;
+    -moz-border-radius:50% ;
+    -ms-border-radius:50% ;
+    -o-border-radius:50% ;
+    object-fit: cover;
+    box-shadow: inset 0 0 1px rgb(18, 26, 34);
+    opacity: 0.7;
+}
+.view-comments .comment-box .comment-body{
+    margin-left: 20px;
+}
+.view-comments .comment-box .comment-body h4{
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 0.9;
+}
+.view-comments .comment-box .comment-body .comment-bottom span{
+    font-size: 13px;
+    font-weight: 700;
+    opacity: 0.7;
+    margin: 0 6px;
+}
+.view-comments .comment-box .comment-body .comment.background-gray{
+    background-color: #E4E6EB;
+    font-size: 15px;
+    padding: 6px;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    margin-right: 25px;
+}
+.view-comments .comment-box .comment-body .comment-bottom span:first-child{
+    font-weight: 500;
+}
+.view-comments .comment-box .comment-body .top-fan-badge img{
+    width: 15px;
+    height: 15px;
+    margin-bottom: -4px;
+}
+.view-comments .comment-box .comment-body .top-fan-badge span{
+    font-size: 14px;
+    font-weight: 500;
+    color: #050505;
+    opacity: 0.6;
+}
+
+.view-comments .comment-field{
+    display: flex;
+    margin-top: 6px;
+}
+.view-comments .comment-field .profile-logo img{
+    width: 30px;
+    height:30px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    object-fit: cover;
+    box-shadow: inset 0 0 1px rgb(18, 26, 34);
+    margin-bottom: -10px;
+    opacity: 0.7;
+}
+.view-comments .comment-field .comment-input{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-left: 10px;
+    background-color: #F0F2F5;
+    border-radius: 30px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    padding: 6px 12px 4px 12px;
+}
+.view-comments .comment-field .comment-input input{
+    width: 335px;
+    background-color: transparent;
+    border: none;
+    font-size: 15px;
+    font-weight: 500;
+}
+.view-comments .comment-field .comment-input input:focus{
+    outline: none;
+    border: none;
+}
+.view-comments .comment-field .comment-input input::placeholder{
+    color: #767676;
+}
+.view-comments .comment-field .comment-input .icons img{
+    margin-bottom: -3px;
+    margin-left: 10px;
+    opacity: 0.5;
 }
