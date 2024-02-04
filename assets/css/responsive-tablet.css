@@ -672,8 +672,8 @@ header .banner{
     margin-top: 6px;
 }
 .view-comments .comment-field .profile-logo img{
-    width: 30px;
-    height:30px;
+    width: 6vw;
+    height:6vw;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -696,8 +696,8 @@ header .banner{
     -moz-border-radius: 30px;
     -ms-border-radius: 30px;
     -o-border-radius: 30px;
-    padding: 6px 12px 4px 12px;
-    min-height: 25px;
+    padding: 1.2vw 2.5vw 1vw 2.5vw;
+    min-height: 5vw;
 }
 .view-comments .comment-field .comment-input input{
     width: auto;
